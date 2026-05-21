@@ -346,10 +346,10 @@ footer{
   <div class="hero-container">
 
     <div class="hero-left">
-      <h3>Hi, I'm Rupak Kothi</h3>
+      <h3>EMBEDDED SYSTEMS ENGINEER</h3>
 
       <h1>
-        <span>Embedded</span><br>
+        Modern <span>Embedded</span><br>
         Systems Engineer
       </h1>
 
@@ -418,10 +418,64 @@ footer{
   </div>
 </section>
 
+<section id="experience">
+  <h2 class="title"><span>Experience</span> Timeline</h2>
+
+  <div class="about-grid">
+
+    <div class="card">
+      <h3>2025 - Present</h3>
+      <br>
+      <h3 style="font-size:24px;color:#00f5ff;">Embedded Engineer & Developer</h3>
+      <br>
+      <p>
+        Datapoint IT and Hardware Tech Pvt. Ltd.
+        <br><br>
+        Working on RTOS, firmware development, debugging,
+        hardware-software integration, and real-time embedded systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>2023</h3>
+      <br>
+      <h3 style="font-size:24px;color:#00f5ff;">Web Development Intern</h3>
+      <br>
+      <p>
+        Toppers World
+        <br><br>
+        Developed responsive web pages using HTML and CSS while improving UI and accessibility.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="certifications">
+  <h2 class="title"><span>Certifications</span></h2>
+
+  <div class="skills-container">
+    <div class="skill">Cisco Cybersecurity</div>
+    <div class="skill">Python - HackerRank</div>
+    <div class="skill">Problem Solving - HackerRank</div>
+    <div class="skill">HTML & CSS Certification</div>
+  </div>
+</section>
+
 <section id="projects">
   <h2 class="title"><span>Featured</span> Projects</h2>
 
   <div class="project-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <h3>IoT Smart Monitoring</h3>
+
+      <p>
+        Built IoT-based monitoring systems using ESP32, sensors, and cloud dashboards for real-time analytics.
+      </p>
+    </div>
 
     <div class="card">
       <h3>Smart Embedded Framework</h3>
@@ -437,6 +491,22 @@ footer{
       <p>
         Developed an intelligent healthcare emergency solution using fingerprint authentication with smart emergency routing and real-time notifications.
       </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="resume">
+  <div class="card contact-box">
+
+    <h2 class="title"><span>Download</span> Resume</h2>
+
+    <p>
+      Download my latest Embedded Systems Engineer resume.
+    </p>
+
+    <div class="footer-buttons">
+      <a href="RUPAK_KOTHI.pdf" download class="btn primary">Download Resume</a>
     </div>
 
   </div>
@@ -460,10 +530,31 @@ footer{
 </section>
 
 <footer>
-  © 2026 Rupak Kothi |Embedded Engineer Portfolio
+  © 2026 Rupak Kothi | Modern Embedded Engineer Portfolio
 </footer>
 
 <script>
+
+window.addEventListener('scroll',()=>{
+  const cards=document.querySelectorAll('.card,.skill');
+
+  cards.forEach(card=>{
+    const position=card.getBoundingClientRect().top;
+
+    if(position<window.innerHeight-100){
+      card.style.opacity='1';
+      card.style.transform='translateY(0px)';
+    }
+  });
+});
+
+const allCards=document.querySelectorAll('.card,.skill');
+allCards.forEach(card=>{
+  card.style.opacity='0';
+  card.style.transform='translateY(60px)';
+  card.style.transition='all 0.8s ease';
+});
+
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
 
